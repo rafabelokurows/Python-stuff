@@ -76,3 +76,76 @@ def show_density(var_data):
 # Get the density of StudyHours
 show_density(df_students['Grade'])
 ```
+
+## Convert 2 List into a dictionary
+
+```
+a = ['GSW', 'LAKERS', 'CLIPPERS']
+b = [1, 2, 3]
+dict(zip(a, b))
+```
+Result: {‘CLIPPERS’: 3, ‘GSW’: 1, ‘LAKERS’: 2}
+
+## Flatten a list
+
+```
+flst = [[1,2,3],[8,9,12,17],[3,7]]
+sorted(sum(flst,[]))
+```
+Result: [1, 2, 3, 3, 7, 8, 9, 12, 17]
+
+## Saving a ML model to a pickle file
+
+```
+#Save the model using pickle
+import pickle
+# save the model to disk
+pickle.dump(model, open(model_file_path, 'wb'))
+
+#Load the model 
+model = pickle.load(open(model_file_path, 'rb'))
+
+#Saving a Keras model
+# Calling `save('my_model')` creates a SavedModel folder `my_model`.
+model.save("my_model")
+#Load a Keras Model
+# It can be used to reconstruct the model identically.
+reconstructed_model = keras.models.load_model("my_model")
+```
+
+## Splitting string using a character
+
+```
+# import Pandas as pd 
+df = pd.DataFrame({'Location': ['Cupertino,California', 'Los Angles, California', 'Palo Alto, California']
+                   })   
+df[['City','State']] = df.Location.str.split(',',expand=True) 
+```
+
+## Reverse a string
+```
+string = [1, 2, 3,5,8,9]
+string[::-1]
+```
+
+## Display data in data.table format in Google Colab
+```
+from google.colab import data_table
+from vega_datasets import data
+data_table.enable_dataframe_formatter()
+data.airports()
+```
+
+## Functions
+* pandas.melt() = dataframe wide to long
+* str.casefold
+* str.upper
+* str.lower
+* str.capitalize
+* str.title
+* str.swapcase
+
+
+## Packages
+* Faker: generating fake data and anonymizing data
+*  
