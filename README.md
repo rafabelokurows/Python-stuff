@@ -136,7 +136,95 @@ data_table.enable_dataframe_formatter()
 data.airports()
 ```
 
-## Functions
+## Creating column based on mapping another column
+```
+monthmap = {
+    'Jan':1,
+    'Feb':2,
+    'Mar':3,
+    'Apr':4,
+    'May':5,
+    'Jun':6,
+    'Jul':7,
+    'Aug':8,
+    'Sep':9,
+    'Oct':10,
+    'Nov':11,
+    'Dec':12,
+}
+df['MonthNum'] = df['Month'].apply(lambda x: monthmap[x])
+```
+
+## Converting data from one format to another 
+```
+from datetime import datetime
+date='2019-Jan-01'
+date_object = datetime.strptime(date, "%Y-%b-%d")
+date_object
+```
+
+## Iterating through columns showing number of uniques and unique values
+```
+for col in df.columns:
+  print(col, len(df[col].unique()),df[col].unique())
+```
+
+## Descrevendo DF incluindo colunas object
+```
+df.describe(include="object")
+```
+
+## Error handling - Try -> Except
+```
+new_set = {1,2,3,4,5,6}
+try:
+  print(new_set)
+  new_set[0] = 4
+except Exception as e:
+  print('Deu merda:\n',e)
+```
+
+## Writing file
+```
+with open('teste123.txt','w') as f:
+  f.write('Testando para ver como fica o ficheiro que estou gravando \n Teste')
+```
+
+## Reading file
+```
+with open('teste.txt','r') as f:
+  file = f.read()
+```
+
+## Writing file in Colab
+```
+%%writefile teste.txt
+bla bla bla
+```
+
+## Writing Python Script
+```
+%%writefile teste.py
+def launch_codes():
+  return 12345
+```
+
+## Reading Python Script
+```
+from google.colab import files
+files.view('teste.py')
+%run teste.py
+```
+
+## API Request
+```
+header = {'Accept':'application/json'}
+teste = requests.get('https://icanhazdadjoke.com',headers=header)
+json_result = teste.json()
+json_result['joke']
+```
+
+# Functions
 * pandas.melt() = dataframe wide to long
 * str.casefold
 * str.upper
@@ -146,6 +234,6 @@ data.airports()
 * str.swapcase
 
 
-## Packages
+# Packages
 * Faker: generating fake data and anonymizing data
 *  
