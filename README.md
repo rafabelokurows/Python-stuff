@@ -129,7 +129,7 @@ string[::-1]
 ```
 
 ## Compare two DFs
-[<img src="https://media-exp1.licdn.com/dms/image/C5622AQE9L7000z6EwQ/feedshare-shrink_1280/0/1663895270364?e=1666828800&v=beta&t=oktBcl1mVrw2WHFICin7ps-Ts-MIBhGW2a414ss-98Q" width="350" height="750">](https://www.linkedin.com/posts/jessramosmsba_python-programming-data-activity-6978882593601585152-gzrg?utm_source=share&utm_medium=member_desktop)
+[<img src="https://media-exp1.licdn.com/dms/image/C4E22AQFMthtTMSqclw/feedshare-shrink_1280/0/1663873171762?e=1666828800&v=beta&t=QbmZERwbNCC7-Gd9g4Z3rHw0mcMzWoUBCY4IhQYBo8A" width="350" height="750">](https://www.linkedin.com/posts/jessramosmsba_python-programming-data-activity-6978882593601585152-gzrg?utm_source=share&utm_medium=member_desktop)
 
 ## Display data in data.table format in Google Colab
 ```
