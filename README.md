@@ -20,6 +20,7 @@ df['bathrooms_text'].apply(parse_baths)
 
 
 ## Bypassing SSL certificate verification
+https://stackoverflow.com/questions/15445981/how-do-i-disable-the-security-certificate-check-in-python-requests
 Wrap the function with error in this:
 ```
 with no_ssl_verification():
