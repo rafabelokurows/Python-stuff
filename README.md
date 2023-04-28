@@ -1,5 +1,24 @@
 # Python-stuff
 
+## Applying function to DF column to parse numbers based on string
+```
+data = {'bathrooms_text': ['1 bath', '1.5 baths', '2 baths', '2.5 baths']}
+df = pd.DataFrame(data)
+
+# Define a function to extract the numbers from the string using re.findall()
+def parse_baths(text):
+    pattern = r'(\d+(\.\d+)?)\s*(baths|bath)'
+    match = re.search(pattern, text)
+    if match:
+        return float(match.group(1))
+    else:
+        return None
+
+# Apply the function to the 'bathrooms_text' column using apply()
+df['bathrooms_text'].apply(parse_baths)
+```
+
+
 ## Bypassing SSL certificate verification
 Wrap the function with error in this:
 ```
